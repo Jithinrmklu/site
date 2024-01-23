@@ -6,10 +6,33 @@ import { useEffect, useState } from 'react';
 import Product from "./Products";
 
 const slides = [
-  "https://placebear.com/g/200/200",
-  "https://source.unsplash.com/user/c_v_r/1900×800",
+  {
+    name: "Mycompany.IO",
+    description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
+    image:"https://placekitten.com/400/300"
+  },
+  {
+    name: "Mycompany.IO",
+    description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
+    image:"https://placekitten.com/400/300"
+  },
+  {
+    name: "Mycompany.IO",
+    description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
+    image:"https://placekitten.com/400/300"
+  },
+  {
+    name: "Mycompany.IO",
+    description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
+    image:"https://placekitten.com/400/300"
+  },
+  {
+    name: "Mycompany.IO",
+    description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
+    image:"https://placekitten.com/400/300"
+  }
+ 
 ]
-
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -45,7 +68,7 @@ export default function Slider() {
               key={index}
               className="flex-shrink-0 w-full flex items-center justify-center"
             >
-              <Product />
+              <Product slide={slide}/>
             </div>
           ))}
         </div>
