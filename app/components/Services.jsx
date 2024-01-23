@@ -56,7 +56,7 @@ const Services = () => {
               placeholder="blur"
             />
             <h3 className="text-xl font-semibold mb-2">{service.heading}</h3>
-            <p className="text-gray-600 py-5">{service.description}</p>
+            <p className="text-gray-600 py-5 cursor-pointer">{service.description}</p>
             <Link href="/payment"
               className="inline-block px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
               Buy Now
