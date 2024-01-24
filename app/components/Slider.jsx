@@ -14,35 +14,39 @@ const slides = [
   {
     name: "Mycompany.IO",
     description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
-    image:"https://placekitten.com/400/300"
+    image:"https://placekitten.com/400/308"
   },
   {
     name: "Mycompany.IO",
     description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
-    image:"https://placekitten.com/400/300"
+    image:"https://placekitten.com/400/305"
   },
   {
     name: "Mycompany.IO",
     description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
-    image:"https://placekitten.com/400/300"
+    image:"https://placekitten.com/400/306"
   },
   {
     name: "Mycompany.IO",
     description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
-    image:"https://placekitten.com/400/300"
+    image:"https://placekitten.com/400/307"
   }
  
 ]
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  
 
   const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    setCurrentSlide((prevSlide) =>
+       prevSlide < slides.length-1 ? ((prevSlide + 1) % slides.length) : prevSlide);
+    {console.log(currentSlide)}
+    {console.log(slides.length)}
   };
 
   const prevSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slides.length - 1 : prevSlide - 1
+      prevSlide === 0 ? slides.length-1 : prevSlide - 1
     );
   };
 
