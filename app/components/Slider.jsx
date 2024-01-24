@@ -40,8 +40,6 @@ export default function Slider() {
   const nextSlide = () => {
     setCurrentSlide((prevSlide) =>
        prevSlide < slides.length-1 ? ((prevSlide + 1) % slides.length) : prevSlide);
-    {console.log(currentSlide)}
-    {console.log(slides.length)}
   };
 
   const prevSlide = () => {
