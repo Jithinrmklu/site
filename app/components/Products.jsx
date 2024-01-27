@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-export default function Product({slide}) {
-   const {name,description,image} = slide
+export default function Product({name,description,image}) {
     return (
         <div className="container mx-auto flex justify-center items-center bg-[#242d45] min-h-screen">
             <div className="flex flex-col md:flex-row p-8 items-center">

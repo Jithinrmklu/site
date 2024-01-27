@@ -70,7 +70,7 @@ export default function Slider() {
               key={index}
               className="flex-shrink-0 w-full flex items-center justify-center"
             >
-              <Product slide={slide}/>
+              <Product name={slide.name} description={slide.description} image={slide.image}/>
             </div>
           ))}
         </div>
