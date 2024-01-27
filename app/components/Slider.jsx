@@ -5,20 +5,45 @@ import { useEffect, useState } from 'react';
 import Product from "./Products";
 
 const slides = [
-  "https://placebear.com/g/200/200",
-  "https://source.unsplash.com/user/c_v_r/1900×800",
+  {
+    name: "Mycompany.IO",
+    description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
+    image:"https://placekitten.com/400/300"
+  },
+  {
+    name: "Mycompany.IO",
+    description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
+    image:"https://placekitten.com/400/308"
+  },
+  {
+    name: "Mycompany.IO",
+    description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
+    image:"https://placekitten.com/400/305"
+  },
+  {
+    name: "Mycompany.IO",
+    description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
+    image:"https://placekitten.com/400/306"
+  },
+  {
+    name: "Mycompany.IO",
+    description: "Mycompany.IO is the most experienced Jitsi Meet development company.Jitsi Meet installation, configuration, customization, deployment,auto scaling, maintenance, and commercial support.",
+    image:"https://placekitten.com/400/307"
+  }
+ 
 ]
-
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  
 
   const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    setCurrentSlide((prevSlide) =>
+       prevSlide < slides.length-1 ? ((prevSlide + 1) % slides.length) : prevSlide);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slides.length - 1 : prevSlide - 1
+      prevSlide === 0 ? slides.length-1 : prevSlide - 1
     );
   };
 
@@ -44,7 +69,7 @@ export default function Slider() {
               key={index}
               className="flex-shrink-0 w-full flex items-center justify-center"
             >
-              <Product />
+              <Product name={slide.name} description={slide.description} image={slide.image}/>
             </div>
           ))}
         </div>
