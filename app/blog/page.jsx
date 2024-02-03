@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import BlogList from '../components/BlogList ';
 
 export default function blogs() {
@@ -34,8 +35,15 @@ export default function blogs() {
     ];
 
     return (
-        <div>
-            <BlogList blogs={blogData} />
+        <div className="container items-center justify-center flex  min-h-screen">
+            {/* <BlogList blogs={blogData} /> */}
+            <ul className="max-w-md space-y-1 list-none list-inside dark:text-slate-950 mt-5 text-4xl">
+                <li className='pb-16'><Link href="/webrtc">WebRTC</Link></li>
+                <li className='pb-16'><Link href="/devops" >Devops</Link></li>
+                <li className='pb-16'><Link href="/general" >General</Link></li>
+                <li className='pb-16'><Link href="/products" >Products</Link></li>
+                <li ><Link href="/services" >Services</Link></li>
+            </ul>
         </div>
     );
 };
