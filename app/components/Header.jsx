@@ -4,7 +4,7 @@ import Logo from "../components/dojo-logo.png"
 
 export default function Header() {
     return (
-        <main className="flex justify-between bg-[#242d45] shadow-lg p-4 fixed w-full top-0 z-50">
+        <main className="flex justify-between bg-[#242d45] p-4 fixed w-full top-0 z-50">
             <Image
                 src={Logo}
                 alt="Logo"
