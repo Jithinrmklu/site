@@ -11,7 +11,7 @@ export default function Product({name,description,image}) {
                     </p>
                 </div>
                 <div className="md:w-1/2 md:ml-4">
-                    <img src={image} alt="Logo"
+                    <Image src={image} alt="Logo"
                         width={500}
                         height={500}
                         quality={100} />

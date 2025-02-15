@@ -58,7 +58,7 @@ export default function Slider() {
   }, [currentSlide]);
 
   return (
-    <div className="relative bg-[#242d45] mt-[4rem]">
+    <div className="relative bg-[#242d45] mt-[4.3rem]">
       <div className="overflow-hidden">
         <div
           className="flex ease-in-out duration-500"
